@@ -13,3 +13,7 @@ Something like:
 * mxnet-bln-data-sagemaker/small - small file just to make SM happy for the synthetic training 
 
 To stay out of troubles - sagemaker must be in the name.
+
+## Steps to get the results
+The results are saved to AWS Cloud Watch
+We can use for example awslogs tool https://github.com/jorgebastida/awslogs
