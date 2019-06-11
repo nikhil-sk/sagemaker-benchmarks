@@ -1,0 +1,6 @@
+[submodule "benchmarks/tr-cpu/tf/horovod"]
+	path = benchmarks/tr-cpu/tf/horovod
+	url = https://github.com/horovod/horovod.git
+[submodule "benchmarks/tr-gpu/tf/deep-learning-models"]
+	path = benchmarks/tr-gpu/tf/deep-learning-models
+	url = https://github.com/aws-samples/deep-learning-models.git
