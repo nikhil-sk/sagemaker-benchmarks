@@ -1,10 +1,10 @@
 # Sage Maker Containers Benchmarks
 
-##Manual steps to start
-###Raise SM limits
+## Manual steps to start
+### Raise SM limits
 Limits for P3.16 and C5.18 must be raised. 
 
-###Create a bucket with datasources
+### Create a bucket with datasources
 
 Something like:
 * mxnet-bln-data-sagemaker/imagenet/raw/train-480px
