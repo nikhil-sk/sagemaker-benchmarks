@@ -22,15 +22,15 @@ tf_estimator = TensorFlow(
             "custom_mpi_options": "-x HOROVOD_HIERARCHICAL_ALLREDUCE=1 -x HOROVOD_FUSION_THRESHOLD=16777216 -x TF_CPP_MIN_LOG_LEVEL=0",
         }
     },
-    output_path="s3://bai-results-sagemaker",
+    output_path="s3://bai-results-sagemaker"
     # subnets=["subnet-07735e63c73eddfc0", "subnet-0c027b8eafad8d482"],
-    subnets=["subnet-07735e63c73eddfc0"],
-    security_group_ids=["sg-0a2531f240064758a", "sg-03a2f31c5c8cd5a39"],
+    # subnets=["subnet-07735e63c73eddfc0"],
+    # security_group_ids=["sg-0a2531f240064758a", "sg-03a2f31c5c8cd5a39"],
 )
 
 data = {
     # Just to make sm happy
-    "s1": "s3://mxnet-bln-data-sagemaker/small"
+    "s1": "s3://mxnet-asimov-data-sagemaker/small"
 }
 
 tf_estimator.fit(data, logs=True, wait=True)
