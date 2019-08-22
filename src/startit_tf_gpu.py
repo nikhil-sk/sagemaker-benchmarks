@@ -22,15 +22,15 @@ tf_estimator = TensorFlow(
           }
       },
     output_path="s3://bai-results-sagemaker",
-    train_volume_size=90,
+    train_volume_size=200
     #subnets=["subnet-07735e63c73eddfc0", "subnet-0c027b8eafad8d482"],
-    subnets=["subnet-07735e63c73eddfc0"],
-    security_group_ids=["sg-0a2531f240064758a", "sg-03a2f31c5c8cd5a39"]
+    # subnets=["subnet-07735e63c73eddfc0"],
+    # security_group_ids=["sg-0a2531f240064758a", "sg-03a2f31c5c8cd5a39"]
 )
 
 data = {
-    "train": "s3://mxnet-bln-data-sagemaker/imagenet/raw/train-480px",
-    "validate": "s3://mxnet-bln-data-sagemaker/imagenet/raw/validation-480px",
+    "train": "s3://mxnet-asimov-data-sagemaker/imagenet/raw/train-480px",
+    "validate": "s3://mxnet-asimov-data-sagemaker/imagenet/raw/validation-480px",
 }
 
 tf_estimator.fit(data, logs=True, wait=True)
